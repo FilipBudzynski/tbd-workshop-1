@@ -1,0 +1,5 @@
+  subgraph "cluster_module.gcr" {
+    label = "module.gcr"
+    "module.gcr.google_artifact_registry_repository.registry" [label="google_artifact_registry_repository.registry"];
+    "module.gcr.google_project_service.api" [label="google_project_service.api"];
+  "module.gcr.google_artifact_registry_repository.registry" -> "module.gcr.google_project_service.api";
