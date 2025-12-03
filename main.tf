@@ -154,12 +154,26 @@ module "dataproc" {
 #   }
 # }
 
-resource "google_compute_firewall" "allow-all-internal" {
-  name    = "allow-all-internal"
-  project = var.project_name
-  network = module.vpc.network.network_name
-  allow {
-    protocol = "all"
-  }
-  source_ranges = ["10.0.0.0/8"]
-}
+# CREATE FOR INFRACOST TEST
+# resource "google_compute_firewall" "allow-all-internal" {
+#   name    = "allow-all-internal"
+#   project = var.project_name
+#   network = module.vpc.network.network_name
+#   allow {
+#     protocol = "all"
+#   }
+#   source_ranges = ["10.0.0.0/8"]
+# }
+#
+# resource "google_storage_bucket" "dataproc_temp" {
+#   name                        = "${var.project_name}-dataproc-temp"
+#   project                     = var.project_name
+#   location                    = var.region
+#   storage_class               = "STANDARD"
+#   uniform_bucket_level_access = true
+#   force_destroy               = true
+#   public_access_prevention    = "enforced"
+#   versioning {
+#     enabled = true
+#   }
+# }
