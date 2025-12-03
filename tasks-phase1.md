@@ -138,7 +138,17 @@ Enetered consumption:
 
 10. Find and correct the error in spark-job.py
 
-    ***describe the cause and how to find the error***
+Error:
+```
+Google Cloud Dataproc Agent reports job failure. If logs are available, they can be found at: https://console.cloud.google.com/dataproc/jobs/3e5e9056c4d64046aa87f79e03c4195a?project=tbd-2025z-319020&region=europe-west1 gcloud dataproc jobs wait '3e5e9056c4d64046aa87f79e03c4195a' --region 'europe-west1' --project 'tbd-2025z-319020' https://console.cloud.google.com/storage/browser/tbd-2025z-319020-dataproc-staging/google-cloud-dataproc-metainfo/180160d5-4b16-4369-8e74-9e4277376bfa/jobs/3e5e9056c4d64046aa87f79e03c4195a/ gs://tbd-2025z-319020-dataproc-staging/google-cloud-dataproc-metainfo/180160d5-4b16-4369-8e74-9e4277376bfa/jobs/3e5e9056c4d64046aa87f79e03c4195a/driveroutput.*
+```
+How to find and fix:
+1. Go to gcp dataproc jobs 
+2. See the failing job and investigate logs. 
+3. There is not existing bucket "tbd-2025z-9901-data"
+4. Replace bucket name to "gs://tbd-2025z-319020-data/data/shakespeare/"
+5. clone job 
+6. successful run
 
 11. Add support for preemptible/spot instances in a Dataproc cluster
 
