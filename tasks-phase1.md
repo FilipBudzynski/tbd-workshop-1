@@ -61,7 +61,7 @@ Resources in the module:
 
 ![yarn.png](doc/figures/yarn.png)
 ```bash
-gcloud compute ssh tbd-cluster-m \                   255 29s py base gcloud TBD tbd-2025z-319020 project 20:45:06
+gcloud compute ssh tbd-cluster-m \
   --project=tbd-2025z-319020 \
   --zone=europe-west1-b \
   -- -L 8088:localhost:8088
