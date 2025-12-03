@@ -13,12 +13,12 @@ IMPORTANT ❗ ❗ ❗ Please remember to destroy all the resources after each wo
    
    additional repo: https://github.com/FilipBudzynski/tbd-workshop-1
    
-3. Follow all steps in README.md.
+2. Follow all steps in README.md.
 
-4. From avaialble Github Actions select and run destroy on main branch.
+3. From avaialble Github Actions select and run destroy on main branch.
 
    
-5. Create new git branch and:
+4. Create new git branch and:
     1. Modify tasks-phase1.md file.
     
     2. Create PR from this branch to **YOUR** master and merge it to make new release. 
@@ -27,13 +27,13 @@ IMPORTANT ❗ ❗ ❗ Please remember to destroy all the resources after each wo
     ***place the screenshot from GA after succesfull application of release***
 
 
-6. Analyze terraform code. Play with terraform plan, terraform graph to investigate different modules.
+5. Analyze terraform code. Play with terraform plan, terraform graph to investigate different modules.
     ![alt text](images/image.png)
     Ten moduł Terraform tworzy w projekcie Google Cloud repozytorium Dockerowe w Artifact Registry. Najpierw włącza potrzebną usługę Artifact Registry, żeby można było tworzyć repozytoria. Potem tworzy właściwe repozytorium w regionie europe i pozwala na nadpisywanie tagów obrazów. Moduł generuje też nazwę hosta rejestru na podstawie podanej lokalizacji. Na końcu udostępnia tę nazwę jako output, żeby można było używać jej w innych częściach infrastruktury.
 
     ***describe one selected module and put the output of terraform graph for this module here***
    
-7. Reach YARN UI
+6. Reach YARN UI
 
    ![alt text](images/image-3.png)
    ```gcloud compute ssh tbd-cluster-m \
@@ -42,7 +42,7 @@ IMPORTANT ❗ ❗ ❗ Please remember to destroy all the resources after each wo
     ```
    ***place the command you used for setting up the tunnel, the port and the screenshot of YARN UI here***
    
-8. Draw an architecture diagram (e.g. in draw.io) that includes:
+7. Draw an architecture diagram (e.g. in draw.io) that includes:
     1. Description of the components of service accounts
       - tbd-2025z-318384-lab@tbd-2025z-318384.iam.gserviceaccount.com -> Owner
       - 82368003320-compute@developer.gserviceaccount.com - editor
