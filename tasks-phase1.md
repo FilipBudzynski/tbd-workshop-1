@@ -91,7 +91,7 @@ Enetered consumption:
     monthly_egress_data_transfer_gb: 150
 ```
 
-   ***place the screenshot from infracost output here***
+![infracost-update.png](doc/figures/infracost-update.png)
 
 9. Create a BigQuery dataset and an external table using SQL
     
